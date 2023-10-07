@@ -1,0 +1,89 @@
+work_dir: ./work_dir/ucla/estransformer_ucla # only add the encodings.
+run_mode: train
+
+# feeder
+feeder: feeders.Feeder_ucla.Feeder
+train_feeder_args:
+  data_path: E:/DataSets/all_sqe/
+  split: train
+  debug: False # debug
+  random_choose: False
+  random_shift: False
+  random_move: False
+  repeat: 5
+  normalization: False
+  vel: False   # 运动数据
+  bone: True  # 骨骼数据
+
+test_feeder_args:
+  data_path: E:/DataSets/all_sqe/
+  split: test
+  debug: False  # debug
+  vel: False
+  bone: True
+
+# model
+model: model.es_sttransformer_v3.es_vit
+model_args:
+
+  num_class: 10
+  dim_ins : [64, 64, 128, 128, 256, 256]
+  dims : [64, 128, 128, 256, 256,256]
+  num_heads : 4
+  attn_drop : 0.
+  sp_attention : True
+  sp_pe : True    # spatial attention or not.
+  partition_pe : True   # use partion encoding or not
+  soft_partion : False   # softmax for it.
+  partion_pe_learnabel : True   # partion encoding is learnable or not.
+  structal_enc : False   # relative distance encoding for skeleton struction
+  att_type : gatv2 # gatv1, gatv2
+  sparsity : True   # sparsity or fully connecting.
+  num_joints  : 20
+  time_len : 52
+  use_unfold : True   # use or not use unfold.
+  window_size : 3
+  window_dilation : 1
+  att_soft : 'softmax'    # softmax or tan.
+  leakeyR : 0.1
+  kernel_size : 3
+  t_stride : 1
+  pool_type : 'maxpool'  # avgpool
+  dilations : [1, 2]
+  t_type : 'mul_scale'  # 'mul_scale', 'tcn', 'none';
+  temporal_att : 'se_att'  # se_att, dpatt, none.
+  squeeze_factor : 4
+  t_pe : True
+  att_drop_t : 0.0
+  use_motion : True
+#  partion : [0, 4, 2, 2, 2, 2, 1, 1, 2, 2, 1, 1, 2, 3, 3, 3, 2, 3, 3, 3, 1, 0, 1, 0, 1]
+  partion : [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2]
+
+
+#optim
+weight_decay: 0.0004
+base_lr: 0.1
+lr_decay_rate: 0.1
+step: [50, 80]
+warm_up_epoch: 5
+
+# training
+device: [0]
+cuda_visible_device: '0'
+batch_size: 32
+test_batch_size: 32
+num_epoch: 130
+nesterov: True
+
+#eval_interval
+eval_interval : 1
+
+# label smoothing:
+label_smoothing : 0.0
+num_worker : 0
+
+# save score
+#save_score : True
+
+# weights
+#weights :

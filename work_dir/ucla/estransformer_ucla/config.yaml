@@ -1,0 +1,118 @@
+# command line: main.py --config ./config/ucla_bone.yaml
+
+base_lr: 0.1
+batch_size: 32
+config: ./config/ucla_bone.yaml
+cuda_visible_device: '0'
+device:
+- 0
+eval_interval: 1
+feeder: feeders.Feeder_ucla.Feeder
+ignore_weights: []
+label_smoothing: 0.0
+lr_decay_rate: 0.1
+model: model.es_sttransformer_v3.es_vit
+model_args:
+  att_drop_t: 0.0
+  att_soft: softmax
+  att_type: gatv2
+  attn_drop: 0.0
+  dilations:
+  - 1
+  - 2
+  dim_ins:
+  - 64
+  - 64
+  - 128
+  - 128
+  - 256
+  - 256
+  dims:
+  - 64
+  - 128
+  - 128
+  - 256
+  - 256
+  - 256
+  kernel_size: 3
+  leakeyR: 0.1
+  num_class: 10
+  num_heads: 4
+  num_joints: 20
+  partion:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  partion_pe_learnabel: true
+  partition_pe: true
+  pool_type: maxpool
+  soft_partion: false
+  sp_attention: true
+  sp_pe: true
+  sparsity: true
+  squeeze_factor: 4
+  structal_enc: false
+  t_pe: true
+  t_stride: 1
+  t_type: mul_scale
+  temporal_att: se_att
+  time_len: 52
+  use_motion: true
+  use_unfold: true
+  window_dilation: 1
+  window_size: 3
+nesterov: true
+num_epoch: 130
+num_worker: 0
+optimizer: SGD
+pin_memory: true
+print_log: true
+run_mode: train
+save_epoch: 80
+save_score: false
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 50
+- 80
+test_batch_size: 32
+test_feeder_args:
+  bone: true
+  data_path: E:/DataSets/all_sqe/
+  debug: false
+  split: test
+  vel: false
+train_feeder_args:
+  bone: true
+  data_path: E:/DataSets/all_sqe/
+  debug: false
+  normalization: false
+  random_choose: false
+  random_move: false
+  random_shift: false
+  repeat: 5
+  split: train
+  vel: false
+warm_up_epoch: 5
+weight_decay: 0.0004
+weights: null
+work_dir: ./work_dir/ucla/estransformer_ucla

@@ -1,0 +1,93 @@
+------------------- seed : 1 -------------------  
+[ 2023-10-07 22:30 ] Model load finished: model.es_sttransformer_v3.es_vit
+------------------- seed : 1 -------------------  
+[ 2023-10-07 22:32 ] Model load finished: model.es_sttransformer_v3.es_vit
+[ 2023-10-07 22:32 ] Data load finished
+[ 2023-10-07 22:32 ] Optimizer load finished: SGD
+[ 2023-10-07 22:32 ] base_lr: 0.1
+[ 2023-10-07 22:32 ] batch_size: 32
+[ 2023-10-07 22:32 ] config: ./config/ucla_bone.yaml
+[ 2023-10-07 22:32 ] cuda_visible_device: 0
+[ 2023-10-07 22:32 ] device: [0]
+[ 2023-10-07 22:32 ] eval_interval: 1
+[ 2023-10-07 22:32 ] feeder: feeders.Feeder_ucla.Feeder
+[ 2023-10-07 22:32 ] ignore_weights: []
+[ 2023-10-07 22:32 ] label_smoothing: 0.0
+[ 2023-10-07 22:32 ] lr_decay_rate: 0.1
+[ 2023-10-07 22:32 ] model: model.es_sttransformer_v3.es_vit
+[ 2023-10-07 22:32 ] model_args: {'num_class': 10, 'dim_ins': [64, 64, 128, 128, 256, 256], 'dims': [64, 128, 128, 256, 256, 256], 'num_heads': 4, 'attn_drop': 0.0, 'sp_attention': True, 'sp_pe': True, 'partition_pe': True, 'soft_partion': False, 'partion_pe_learnabel': True, 'structal_enc': False, 'att_type': 'gatv2', 'sparsity': True, 'num_joints': 20, 'time_len': 52, 'use_unfold': True, 'window_size': 3, 'window_dilation': 1, 'att_soft': 'softmax', 'leakeyR': 0.1, 'kernel_size': 3, 't_stride': 1, 'pool_type': 'maxpool', 'dilations': [1, 2], 't_type': 'mul_scale', 'temporal_att': 'se_att', 'squeeze_factor': 4, 't_pe': True, 'att_drop_t': 0.0, 'use_motion': True, 'partion': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2]}
+[ 2023-10-07 22:32 ] nesterov: True
+[ 2023-10-07 22:32 ] num_epoch: 130
+[ 2023-10-07 22:32 ] num_worker: 0
+[ 2023-10-07 22:32 ] optimizer: SGD
+[ 2023-10-07 22:32 ] pin_memory: True
+[ 2023-10-07 22:32 ] print_log: True
+[ 2023-10-07 22:32 ] run_mode: train
+[ 2023-10-07 22:32 ] save_epoch: 80
+[ 2023-10-07 22:32 ] save_score: False
+[ 2023-10-07 22:32 ] show_topk: [1, 5]
+[ 2023-10-07 22:32 ] start_epoch: 0
+[ 2023-10-07 22:32 ] step: [50, 80]
+[ 2023-10-07 22:32 ] test_batch_size: 32
+[ 2023-10-07 22:32 ] test_feeder_args: {'data_path': 'E:/DataSets/all_sqe/', 'split': 'test', 'debug': False, 'vel': False, 'bone': True}
+[ 2023-10-07 22:32 ] train_feeder_args: {'data_path': 'E:/DataSets/all_sqe/', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'repeat': 5, 'normalization': False, 'vel': False, 'bone': True}
+[ 2023-10-07 22:32 ] warm_up_epoch: 5
+[ 2023-10-07 22:32 ] weight_decay: 0.0004
+[ 2023-10-07 22:32 ] weights: None
+[ 2023-10-07 22:32 ] work_dir: ./work_dir/ucla/estransformer_ucla
+[ 2023-10-07 22:32 ] # Parameters: 1744432
+[ 2023-10-07 22:32 ] ###***************start training***************###
+[ 2023-10-07 22:32 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-10-07 22:34 ] training: epoch: 1, loss: 1.0980, top1: 58.82%, lr: 0.020000
+[ 2023-10-07 22:34 ] evaluating: loss: 0.8378, top1: 68.75%, best_acc: 68.75%
+[ 2023-10-07 22:34 ] adjust learning rate, using warm up, epoch: 5
+------------------- seed : 1 -------------------  
+[ 2023-10-07 22:34 ] Model load finished: model.es_sttransformer_v3.es_vit
+[ 2023-10-07 22:34 ] Data load finished
+[ 2023-10-07 22:34 ] Optimizer load finished: SGD
+[ 2023-10-07 22:34 ] base_lr: 0.1
+[ 2023-10-07 22:34 ] batch_size: 32
+[ 2023-10-07 22:34 ] config: ./config/ucla_bone.yaml
+[ 2023-10-07 22:34 ] cuda_visible_device: 0
+[ 2023-10-07 22:34 ] device: [0]
+[ 2023-10-07 22:34 ] eval_interval: 1
+[ 2023-10-07 22:34 ] feeder: feeders.Feeder_ucla.Feeder
+[ 2023-10-07 22:34 ] ignore_weights: []
+[ 2023-10-07 22:34 ] label_smoothing: 0.0
+[ 2023-10-07 22:34 ] lr_decay_rate: 0.1
+[ 2023-10-07 22:34 ] model: model.es_sttransformer_v3.es_vit
+[ 2023-10-07 22:34 ] model_args: {'num_class': 10, 'dim_ins': [64, 64, 128, 128, 256, 256], 'dims': [64, 128, 128, 256, 256, 256], 'num_heads': 4, 'attn_drop': 0.0, 'sp_attention': True, 'sp_pe': True, 'partition_pe': True, 'soft_partion': False, 'partion_pe_learnabel': True, 'structal_enc': False, 'att_type': 'gatv2', 'sparsity': True, 'num_joints': 20, 'time_len': 52, 'use_unfold': True, 'window_size': 3, 'window_dilation': 1, 'att_soft': 'softmax', 'leakeyR': 0.1, 'kernel_size': 3, 't_stride': 1, 'pool_type': 'maxpool', 'dilations': [1, 2], 't_type': 'mul_scale', 'temporal_att': 'se_att', 'squeeze_factor': 4, 't_pe': True, 'att_drop_t': 0.0, 'use_motion': True, 'partion': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2]}
+[ 2023-10-07 22:34 ] nesterov: True
+[ 2023-10-07 22:34 ] num_epoch: 130
+[ 2023-10-07 22:34 ] num_worker: 0
+[ 2023-10-07 22:34 ] optimizer: SGD
+[ 2023-10-07 22:34 ] pin_memory: True
+[ 2023-10-07 22:34 ] print_log: True
+[ 2023-10-07 22:34 ] run_mode: train
+[ 2023-10-07 22:34 ] save_epoch: 80
+[ 2023-10-07 22:34 ] save_score: False
+[ 2023-10-07 22:34 ] show_topk: [1, 5]
+[ 2023-10-07 22:34 ] start_epoch: 0
+[ 2023-10-07 22:34 ] step: [50, 80]
+[ 2023-10-07 22:34 ] test_batch_size: 32
+[ 2023-10-07 22:34 ] test_feeder_args: {'data_path': 'E:/DataSets/all_sqe/', 'split': 'test', 'debug': False, 'vel': False, 'bone': True}
+[ 2023-10-07 22:34 ] train_feeder_args: {'data_path': 'E:/DataSets/all_sqe/', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'repeat': 5, 'normalization': False, 'vel': False, 'bone': True}
+[ 2023-10-07 22:34 ] warm_up_epoch: 5
+[ 2023-10-07 22:34 ] weight_decay: 0.0004
+[ 2023-10-07 22:34 ] weights: None
+[ 2023-10-07 22:34 ] work_dir: ./work_dir/ucla/estransformer_ucla
+[ 2023-10-07 22:34 ] # Parameters: 1744432
+[ 2023-10-07 22:34 ] ###***************start training***************###
+[ 2023-10-07 22:34 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-10-07 22:36 ] training: epoch: 1, loss: 1.0980, top1: 58.82%, lr: 0.020000
+[ 2023-10-07 22:36 ] evaluating: loss: 0.8378, top1: 68.75%, best_acc: 68.75%
+[ 2023-10-07 22:36 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-10-07 22:38 ] training: epoch: 2, loss: 0.7157, top1: 72.50%, lr: 0.040000
+[ 2023-10-07 22:38 ] evaluating: loss: 0.7276, top1: 73.06%, best_acc: 73.06%
+[ 2023-10-07 22:38 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-10-07 22:40 ] training: epoch: 3, loss: 0.6099, top1: 77.99%, lr: 0.060000
+[ 2023-10-07 22:40 ] evaluating: loss: 0.5327, top1: 81.90%, best_acc: 81.90%
+[ 2023-10-07 22:40 ] adjust learning rate, using warm up, epoch: 5
+------------------- seed : 1 -------------------  
+[ 2023-10-07 22:50 ] Model load finished: model.es_sttransformer_v3.es_vit
+[ 2023-10-07 22:50 ] Data load finished
